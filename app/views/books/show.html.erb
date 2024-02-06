@@ -1,0 +1,16 @@
+<body>
+<div class="show-box">
+    <p id="notice"><%= flash[:notice] %></p>
+    <div class=show><b>Title: </b><%= @data.title %></div>
+
+
+    <div class="show"><b>Body: </b><%= @data.body %> </div>
+
+
+</div>
+    <div class="show-botan">
+      <p class="show-text"><%= link_to "Edit", edit_e_path(@data.id) %></p>
+      <p class="show-text">|</p>
+      <p class="show-text"><%= link_to "Back", "/books" %></p>
+    </div>
+</body>

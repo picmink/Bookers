@@ -1,0 +1,22 @@
+<div class="edit-box">
+    <h1 class="edit">Editing Book</h1>
+
+        <div class="edit-title-box">
+            <%= form_with model: @edit, url: update_up_path(@edit.id), method: :patch do |f| %>
+            <label class="edit-title">Title</label>
+              <div class="text-area"><%= f.text_field :title %></div>
+            <label class="edit-title">Body</label>
+              <div class="text-area"><%= f.text_area :body %></div>
+        
+            <div class="edit-update"><%= f.submit 'Update Book' %></div>
+        </div>
+    
+    <div class="edit-botan">
+        <p class="edit-botan-text"><%= link_to "Show", "/books/#{@edit.id}" %></p>
+        <p class="edit-botan-text">|</p>
+        <p class="edit-botan-text"><%= link_to "Back", "/books" %></p>
+    </div>
+        
+
+    <% end %>
+</div>
